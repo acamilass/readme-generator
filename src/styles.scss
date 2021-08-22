@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media (max-width: 75em) {
+    font-size: 56.25%;
+  }
+
+  @media (max-width: 56.25em) {
+    font-size: 50%;
+  }
+
+  @media (max-width: 112.5em) {
+    font-size: 75%;
+  }
+}
