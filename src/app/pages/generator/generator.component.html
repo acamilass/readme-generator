@@ -1,22 +1,29 @@
 <div class="container">
   <div class="container__input">
+
     <div class="input">
       <label for="title-h1">Title</label>
       <input class="input-area" type="text" id="title-h1" [(ngModel)]="titleH1">
     </div>
+
     <div *ngFor="let section of sections; let i = index">
       <h2 class="section-title">Section {{ i + 1 }}</h2>
+
       <div class="input">
         <label for="title-h2">Title</label>
         <input class="input-area" type="text" id="title-h2" [(ngModel)]="section.title">
         <label for="description">Description</label>
         <textarea class="input-area" id="description" cols="30" rows="10" [(ngModel)]="section.description"></textarea>
       </div>
+
     </div>
+
     <button class="section-btn" (click)="createNewSection()">+ Add section</button>
   </div>
+
   <div class="container__preview">
     <h1 class="container__preview--title">Preview</h1>
+
     <div class="markdown">
       <h1 class="markdown__title">{{ titleH1 }}</h1>
       <div class="markdown__section" *ngFor="let section of sections; let i = index">
@@ -24,8 +31,9 @@
         <p>{{ section.description }}</p>
       </div>
     </div>
-    <div class="" style="margin-top: 2rem;">
-      <button type="button" (click)="downloadFile()">DOWNLOAD</button>
+
+    <div class="" style="margin-top: 1rem; align-self: center;">
+      <button type="button" class="container__preview--btn" (click)="downloadFile()">DOWNLOAD</button>
     </div>
   </div>
 </div>

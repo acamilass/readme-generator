@@ -7,6 +7,11 @@
   &__input {
     width: 50%;
 
+    display: flex;
+    flex-direction: column;
+
+    padding-right: 3.5rem;
+
     .input {
       display: flex;
       flex-direction: column;
@@ -21,7 +26,7 @@
       .input-area {
         margin-bottom: 1rem;
         padding: .5rem;
-        width: 90%;
+        width: 100%;
         border: 1px solid;
         border-radius: 5px;
         font-size: 1.4rem;
@@ -41,11 +46,16 @@
       font-size: 1.4rem;
       padding: 1rem 0;
       cursor: pointer;
+
+      align-self: flex-end;
     }
   }
 
   &__preview {
     width: 50%;
+
+    display: flex;
+    flex-direction: column;
 
     &--title {
       margin-bottom: 1rem;
@@ -53,7 +63,7 @@
     }
 
     .markdown {
-      height: 90%;
+      height: 100%;
       border: 1px solid;
       border-radius: 5px;
       padding: 1.5rem;
@@ -80,12 +90,14 @@
       }
     }
 
-    &--download {
+    &--btn {
       cursor: pointer;
       padding: 1rem 3rem;
       border-radius: 5px;
+      border: none;
 
-      background-color: wheat;
+      background-color: #435058;
+      color: #fff;
     }
   }
 }
