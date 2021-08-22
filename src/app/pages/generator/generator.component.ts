@@ -12,7 +12,7 @@ export class GeneratorComponent implements OnInit {
   title!: string;
   description!: string;
 
-  sections!: Array<any>;
+  sections!: Array<SectionModel>;
 
   constructor() { }
 
@@ -35,7 +35,7 @@ export class GeneratorComponent implements OnInit {
       return;
     }
 
-    if (!fileName) fileName = 'console.json'
+    if (!fileName) fileName = 'console.json';
 
     let blob = new Blob([data], { type: 'text/plain' });
     let  el = document.createEvent('MouseEvents');
@@ -47,7 +47,7 @@ export class GeneratorComponent implements OnInit {
       window.navigator.msSaveOrOpenBlob(blob, fileName);
     }
     else {
-      el = document.createEvent('MouseEvents'),
+      el = document.createEvent('MouseEvents');
       a = document.createElement('a');
 
       a.download = fileName;
@@ -58,12 +58,12 @@ export class GeneratorComponent implements OnInit {
     }
   }
 
-
   downloadFile() {
     const fileText =
-    `# ${this.titleH1}\r\n\n## ${this.sections[0].title}\r\n${this.sections[0].description}`;
+    `# ${this.titleH1}\r\n\n${this.sections.map(section => `## ${section.title}\r\n${section.description}`).toString().replace(',', '\r\n\n')}`;
 
-    const fileName = 'README.txt';
+    const fileName = 'README.md';
+
     this.saveTextAsFile(fileText, fileName);
   }
 
