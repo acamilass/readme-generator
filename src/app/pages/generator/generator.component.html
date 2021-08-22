@@ -17,9 +17,9 @@
   </div>
   <div class="container__preview">
     <h1 class="container__preview--title">Preview</h1>
-    <div class="preview">
-      <h1>{{ titleH1 }}</h1>
-      <div class="" *ngFor="let section of sections; let i = index">
+    <div class="markdown">
+      <h1 class="markdown__title">{{ titleH1 }}</h1>
+      <div class="markdown__section" *ngFor="let section of sections; let i = index">
         <h2>{{ section.titleH2 }}</h2>
         <p>{{ section.description }}</p>
       </div>

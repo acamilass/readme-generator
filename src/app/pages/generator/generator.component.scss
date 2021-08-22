@@ -47,16 +47,37 @@
   &__preview {
     width: 50%;
 
-    .preview {
+    &--title {
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .markdown {
       height: 100%;
       border: 1px solid;
       border-radius: 5px;
       padding: 1.5rem;
-    }
 
-    &--title {
-      margin-bottom: 1rem;
-      font-weight: 400;
+      &__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      &__section {
+        margin-bottom: 1rem;
+
+        h2 {
+          font-size: 1.8rem;
+          font-weight: 400;
+          margin-bottom: .5rem;
+        }
+
+        p {
+          font-weight: 300;
+          font-size: 1.6rem;
+        }
+      }
     }
   }
 }
