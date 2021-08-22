@@ -1,0 +1,22 @@
+.container {
+  height: 85vh;
+  width: 100vw;
+  padding: 3rem;
+
+  display: flex;
+
+  &__input {
+    width: 50%;
+  }
+
+  &__preview {
+    width: 50%;
+
+    .preview {
+      height: 100%;
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 1.5rem;
+    }
+  }
+}
