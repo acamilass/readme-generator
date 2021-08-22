@@ -4,21 +4,24 @@
       <label for="title-h1">Title</label>
       <input class="input-area" type="text" id="title-h1" [(ngModel)]="titleH1">
     </div>
-    <div>
-      <h2 class="section-title">Section 1</h2>
+    <div *ngFor="let section of sections; let i = index">
+      <h2 class="section-title">Section {{ i + 1 }}</h2>
       <div class="input">
         <label for="title-h2">Title</label>
-        <input class="input-area" type="text" id="title-h2" [(ngModel)]="titleH2">
+        <input class="input-area" type="text" id="title-h2" [(ngModel)]="section.titleH2">
         <label for="description">Description</label>
-        <textarea class="input-area" id="description" cols="30" rows="10" [(ngModel)]="description"></textarea>
+        <textarea class="input-area" id="description" cols="30" rows="10" [(ngModel)]="section.description"></textarea>
       </div>
     </div>
+    <button (click)="createNewSection()">adicionar section</button>
   </div>
   <div class="container__preview">
     <div class="preview">
       <h1>{{ titleH1 }}</h1>
-      <h2>{{ titleH2 }}</h2>
-      <p>{{ description }}</p>
+      <div class="" *ngFor="let section of sections; let i = index">
+        <h2>{{ section.titleH2 }}</h2>
+        <p>{{ section.description }}</p>
+      </div>
     </div>
   </div>
 </div>
