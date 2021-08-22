@@ -1,5 +1,4 @@
 .container {
-  height: 85vh;
   width: 100vw;
   padding: 3rem;
 
@@ -22,7 +21,7 @@
       .input-area {
         margin-bottom: 1rem;
         padding: .5rem;
-        width: 40rem;
+        width: 90%;
         border: 1px solid;
         border-radius: 5px;
         font-size: 1.4rem;
@@ -35,6 +34,14 @@
       font-size: 1.8rem;
       font-weight: 400;
     }
+
+    .section-btn {
+      background-color: transparent;
+      border: none;
+      font-size: 1.4rem;
+      padding: 1rem 0;
+      cursor: pointer;
+    }
   }
 
   &__preview {
@@ -45,6 +52,11 @@
       border: 1px solid;
       border-radius: 5px;
       padding: 1.5rem;
+    }
+
+    &--title {
+      margin-bottom: 1rem;
+      font-weight: 400;
     }
   }
 }

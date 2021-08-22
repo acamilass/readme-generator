@@ -13,9 +13,10 @@
         <textarea class="input-area" id="description" cols="30" rows="10" [(ngModel)]="section.description"></textarea>
       </div>
     </div>
-    <button (click)="createNewSection()">adicionar section</button>
+    <button class="section-btn" (click)="createNewSection()">+ Add section</button>
   </div>
   <div class="container__preview">
+    <h1 class="container__preview--title">Preview</h1>
     <div class="preview">
       <h1>{{ titleH1 }}</h1>
       <div class="" *ngFor="let section of sections; let i = index">
