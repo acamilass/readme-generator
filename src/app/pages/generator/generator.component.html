@@ -8,7 +8,7 @@
       <h2 class="section-title">Section {{ i + 1 }}</h2>
       <div class="input">
         <label for="title-h2">Title</label>
-        <input class="input-area" type="text" id="title-h2" [(ngModel)]="section.titleH2">
+        <input class="input-area" type="text" id="title-h2" [(ngModel)]="section.title">
         <label for="description">Description</label>
         <textarea class="input-area" id="description" cols="30" rows="10" [(ngModel)]="section.description"></textarea>
       </div>
@@ -20,9 +20,12 @@
     <div class="markdown">
       <h1 class="markdown__title">{{ titleH1 }}</h1>
       <div class="markdown__section" *ngFor="let section of sections; let i = index">
-        <h2>{{ section.titleH2 }}</h2>
+        <h2>{{ section.title }}</h2>
         <p>{{ section.description }}</p>
       </div>
+    </div>
+    <div class="" style="margin-top: 2rem;">
+      <button type="button" (click)="downloadFile()">DOWNLOAD</button>
     </div>
   </div>
 </div>
