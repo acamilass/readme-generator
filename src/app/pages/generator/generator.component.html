@@ -1,10 +1,24 @@
 <div class="container">
   <div class="container__input">
-    <h1>Input</h1>
+    <div class="input">
+      <label for="title-h1">Title</label>
+      <input class="input-area" type="text" id="title-h1" [(ngModel)]="titleH1">
+    </div>
+    <div>
+      <h2 class="section-title">Section 1</h2>
+      <div class="input">
+        <label for="title-h2">Title</label>
+        <input class="input-area" type="text" id="title-h2" [(ngModel)]="titleH2">
+        <label for="description">Description</label>
+        <textarea class="input-area" id="description" cols="30" rows="10" [(ngModel)]="description"></textarea>
+      </div>
+    </div>
   </div>
   <div class="container__preview">
     <div class="preview">
-      <h1>Preview</h1>
+      <h1>{{ titleH1 }}</h1>
+      <h2>{{ titleH2 }}</h2>
+      <p>{{ description }}</p>
     </div>
   </div>
 </div>
