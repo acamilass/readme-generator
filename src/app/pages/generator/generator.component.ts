@@ -65,6 +65,11 @@ export class GeneratorComponent implements OnInit {
     const fileName = 'README.md';
 
     this.saveTextAsFile(fileText, fileName);
+
+    this.titleH1 = '';
+    this.sections = [
+      new SectionModel(this.title, this.description)
+    ];
   }
 
 }
