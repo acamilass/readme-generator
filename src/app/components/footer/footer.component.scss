@@ -1,0 +1,21 @@
+.container {
+  position: fixed;
+  bottom: 0;
+
+  height: 5rem;
+  width: 100vw;
+  padding: 1rem 0;
+  box-sizing: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #footer {
+    font-size: 1.2rem;
+
+    a {
+      color: inherit;
+    }
+  }
+}
