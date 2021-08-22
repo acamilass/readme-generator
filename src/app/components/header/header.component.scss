@@ -8,4 +8,26 @@
   h1 {
     font-size: 4rem;
   }
+
+  .btn__container {
+    margin-left: 2rem;
+
+    .btn {
+      height: 4rem;
+      width: 4rem;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+
+      .btn-sun,
+      .btn-moon {
+        height: 4rem;
+        width: 4rem;
+      }
+
+      .btn-sun {
+        filter: invert(100%);
+      }
+    }
+  }
 }

@@ -1,11 +1,11 @@
 <div class="container">
   <h1>README Generator</h1>
-  <div>
-    <button (click)="goToLightMode()">
-      <img src="../../../assets/icon-sun.png" alt="Sol">
+  <div class="btn__container">
+    <button (click)="goToLightMode()" *ngIf="isDarkMode" class="btn">
+      <img class="btn-sun" src="../../../assets/icon-sun.png" alt="Sol">
     </button>
-    <button (click)="goToDarkMode()">
-      <img src="../../../assets/icon-moon.png" alt="">
+    <button (click)="goToDarkMode()" *ngIf="!isDarkMode" class="btn">
+      <img class="btn-moon" src="../../../assets/icon-moon.png" alt="">
     </button>
   </div>
 </div>
