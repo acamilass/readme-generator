@@ -60,7 +60,7 @@ export class GeneratorComponent implements OnInit {
 
   downloadFile() {
     const fileText =
-    `# ${this.titleH1}\r\n\n${this.sections.map(section => `## ${section.title}\r\n${section.description}`).toString().replace(',', '\r\n\n')}`;
+    `# ${this.titleH1}\r\n\n${this.sections.map(section => `## ${section.title}\r\n\n${section.description}`).toString().replace(',', '\r\n\n')}`;
 
     const fileName = 'README.md';
 
