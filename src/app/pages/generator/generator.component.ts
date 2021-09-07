@@ -18,14 +18,18 @@ export class GeneratorComponent implements OnInit {
 
   ngOnInit(): void {
     this.sections = [
-      new SectionModel(this.title, this.description)
+      new SectionModel(this.title, this.description, false)
     ];
   }
 
   createNewSection() {
     let title = '';
     let description = '';
-    return this.sections.push(new SectionModel(title, description));
+    return this.sections.push(new SectionModel(title, description, true));
+  }
+
+  deleteSection() {
+    return this.sections.pop();
   }
 
   saveTextAsFile(data: string, fileName: string) {
@@ -68,7 +72,7 @@ export class GeneratorComponent implements OnInit {
 
     this.titleH1 = '';
     this.sections = [
-      new SectionModel(this.title, this.description)
+      new SectionModel(this.title, this.description, false)
     ];
   }
 

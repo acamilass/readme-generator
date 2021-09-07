@@ -7,13 +7,16 @@
     </div>
 
     <div *ngFor="let section of sections; let i = index">
-      <h2 class="section-title">Section {{ i + 1 }}</h2>
+      <div style="display: flex; align-items: center;">
+        <h2 class="section-title">Section {{ i + 1 }}</h2>
+        <button id="section-btn" class="section-btn" style="margin-left: 1rem;" *ngIf="section.canDelete" (click)="deleteSection()">X</button>
+      </div>
 
       <div class="input">
         <label for="title-h2">Title</label>
         <input class="input-area" type="text" id="title-h2" [(ngModel)]="section.title">
         <label for="description">Description</label>
-        <textarea class="input-area" id="description" cols="30" rows="10" [(ngModel)]="section.description"></textarea>
+        <textarea class="input-area" id="description" cols="30" rows="5" [(ngModel)]="section.description"></textarea>
       </div>
 
     </div>

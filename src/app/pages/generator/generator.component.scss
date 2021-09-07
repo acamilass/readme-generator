@@ -6,6 +6,8 @@
 
   &__input {
     width: 50%;
+    height: 60vh;
+    overflow: scroll;
 
     display: flex;
     flex-direction: column;
@@ -44,7 +46,6 @@
       background-color: transparent;
       border: none;
       font-size: 1.4rem;
-      padding: 1rem 0;
       cursor: pointer;
 
       align-self: flex-end;
@@ -53,6 +54,7 @@
 
   &__preview {
     width: 50%;
+    height: 65vh;
 
     display: flex;
     flex-direction: column;
@@ -63,6 +65,8 @@
     }
 
     .markdown {
+      overflow: scroll;
+
       height: 100%;
       border: 1px solid;
       border-radius: 5px;
@@ -76,6 +80,10 @@
 
       &__section {
         margin-bottom: 1rem;
+
+        h2, p {
+          word-break: break-word;
+        }
 
         h2 {
           font-size: 1.8rem;
